@@ -1,0 +1,5 @@
+db:
+  name: rda-cngp-testdb01
+  instances: 2
+  size: 10Gi
+  nodePort: 30432

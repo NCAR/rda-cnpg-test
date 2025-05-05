@@ -12,10 +12,10 @@ spec:
   ingressClassName: nginx-internal
   tls:
     - hosts:
-      - {{ .Values.db.hostname }}.k8s.ucar.edu
-      secretName: {{ .Values.db.hostname }}-tls-secret
+      - {{ .Values.db.name }}.k8s.ucar.edu
+      secretName: {{ .Values.db.name }}-tls-secret
   rules:
-  - host: {{ .Values.db.hostname }}.k8s.ucar.edu
+  - host: {{ .Values.db.name }}.k8s.ucar.edu
     http:
       paths:
       - path: /

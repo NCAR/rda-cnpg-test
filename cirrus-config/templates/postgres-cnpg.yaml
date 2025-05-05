@@ -6,4 +6,4 @@ metadata:
 spec:
   instances: {{ .Values.db.instances }}
   storage:
-    {{ .Values.db.size }}
+    size: {{ .Values.db.size }}

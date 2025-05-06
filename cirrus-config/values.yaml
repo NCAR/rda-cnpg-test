@@ -3,3 +3,5 @@ db:
   instances: 2
   size: 10Gi
   nodePort: 30432
+  superuserPassword: rdaTemptestPass
+  appPassword: rdaApptestPass

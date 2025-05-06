@@ -7,3 +7,18 @@ spec:
   instances: {{ .Values.db.instances }}
   storage:
     size: {{ .Values.db.size }}
+      
+  # Enable superuser access
+  enableSuperuserAccess: true
+  
+  # Configure a known password for postgres user
+  superuserSecret:
+    name: "{{ .Values.db.name }}-superuser"
+
+  # Create a standard application user as well
+  bootstrap:
+    initdb:
+      database: app
+      owner: app
+      secret:
+        name: "{{ .Values.db.name }}-app-user"
